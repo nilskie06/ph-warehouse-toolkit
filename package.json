@@ -1,6 +1,6 @@
 {
   "name": "ph-warehouse-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Philippine warehousing utilities — peso currency, BIR compliance, inventory management, address lookup, validation, barcode support, and more",
   "type": "module",
   "main": "./dist/index.cjs",
