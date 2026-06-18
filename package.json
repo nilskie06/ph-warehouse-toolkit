@@ -1,0 +1,74 @@
+{
+  "name": "ph-warehouse-toolkit",
+  "version": "0.1.0",
+  "description": "Philippine warehousing utilities — peso currency, BIR compliance, inventory management, address lookup, validation, barcode support, and more",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./currency": {
+      "types": "./dist/currency.d.ts",
+      "import": "./dist/currency.js",
+      "require": "./dist/currency.cjs"
+    },
+    "./address": {
+      "types": "./dist/address.d.ts",
+      "import": "./dist/address.js",
+      "require": "./dist/address.cjs"
+    },
+    "./compliance": {
+      "types": "./dist/compliance.d.ts",
+      "import": "./dist/compliance.js",
+      "require": "./dist/compliance.cjs"
+    },
+    "./inventory": {
+      "types": "./dist/inventory.d.ts",
+      "import": "./dist/inventory.js",
+      "require": "./dist/inventory.cjs"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "import": "./dist/validation.js",
+      "require": "./dist/validation.cjs"
+    },
+    "./barcode": {
+      "types": "./dist/barcode.d.ts",
+      "import": "./dist/barcode.js",
+      "require": "./dist/barcode.cjs"
+    },
+    "./documents": {
+      "types": "./dist/documents.d.ts",
+      "import": "./dist/documents.js",
+      "require": "./dist/documents.cjs"
+    },
+    "./holidays": {
+      "types": "./dist/holidays.d.ts",
+      "import": "./dist/holidays.js",
+      "require": "./dist/holidays.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["warehouse", "inventory", "philippines", "bir", "peso", "logistics", "stock", "barcode", "typescript"],
+  "author": "Nilo Besingga",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
