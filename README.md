@@ -1,4 +1,4 @@
-# ph-warehouse-toolkit
+# @ph-itdev/ph-warehouse-toolkit
 
 Philippine warehousing utilities for Node.js — currency, BIR compliance,
 inventory management, address lookup, validation, barcode support, and more.
@@ -9,13 +9,13 @@ inventory management, address lookup, validation, barcode support, and more.
 ## Install
 
 ```bash
-npm install ph-warehouse-toolkit
+npm install @ph-itdev/ph-warehouse-toolkit
 ```
 
 ## Quick Start
 
 ```ts
-import { formatPeso, calculateVAT, generateSKU, isWarehouseOpen } from 'ph-warehouse-toolkit';
+import { formatPeso, calculateVAT, generateSKU, isWarehouseOpen } from '@ph-itdev/ph-warehouse-toolkit';
 
 // Philippine Peso formatting
 formatPeso(125000);        // ₱125,000.00
@@ -34,7 +34,7 @@ isWarehouseOpen(new Date());  // true/false
 
 ### 💰 Currency
 ```ts
-import { formatPeso, parsePeso, formatPesoShort, calculateVAT, addVAT, extractVAT } from 'ph-warehouse-toolkit/currency';
+import { formatPeso, parsePeso, formatPesoShort, calculateVAT, addVAT, extractVAT } from '@ph-itdev/ph-warehouse-toolkit/currency';
 
 formatPeso(1234567.89);        // ₱1,234,567.89
 formatPesoShort(2500000);       // ₱2.5M
@@ -45,7 +45,7 @@ extractVAT(1120);              // { vatableAmount: 1000, vatAmount: 120, grossAm
 
 ### 📍 Address
 ```ts
-import { getRegions, getProvinces, formatAddress } from 'ph-warehouse-toolkit/address';
+import { getRegions, getProvinces, formatAddress } from '@ph-itdev/ph-warehouse-toolkit/address';
 
 getRegions();           // All 17 PH regions
 getProvinces('03');      // ['Aurora', 'Bataan', 'Bulacan', 'Pampanga', ...]
@@ -55,7 +55,7 @@ formatAddress({ street: '123 Rizal Ave', barangay: '123', city: 'Makati City', p
 
 ### ✅ Validation
 ```ts
-import { isValidPHPhone, isValidPHMobile, isValidTIN, isValidPHZipCode } from 'ph-warehouse-toolkit/validation';
+import { isValidPHPhone, isValidPHMobile, isValidTIN, isValidPHZipCode } from '@ph-itdev/ph-warehouse-toolkit/validation';
 
 isValidPHPhone('09171234567');    // true (Globe mobile)
 isValidPHMobile('09171234567');  // true
@@ -65,7 +65,7 @@ isValidPHZipCode('1200');        // true
 
 ### 📦 Inventory
 ```ts
-import { generateSKU, parseSKU, calculateReorderPoint, calculateEOQ, calculateStockValue } from 'ph-warehouse-toolkit/inventory';
+import { generateSKU, parseSKU, calculateReorderPoint, calculateEOQ, calculateStockValue } from '@ph-itdev/ph-warehouse-toolkit/inventory';
 
 generateSKU({ prefix: 'WH', category: 'EL', sequence: 1 });  // 'WH-EL-000001'
 parseSKU('WH-EL-000042');  // { prefix: 'WH', category: 'EL', sequence: 42 }
@@ -76,7 +76,7 @@ calculateStockValue([{ quantity: 100, unitCost: 50 }, { quantity: 50, unitCost: 
 
 ### 🏷️ Barcode
 ```ts
-import { calculateEAN13CheckDigit, validateEAN13, generateCode128Data } from 'ph-warehouse-toolkit/barcode';
+import { calculateEAN13CheckDigit, validateEAN13, generateCode128Data } from '@ph-itdev/ph-warehouse-toolkit/barcode';
 
 calculateEAN13CheckDigit('400638133393');  // 1
 validateEAN13('4006381333931');           // true
@@ -84,7 +84,7 @@ validateEAN13('4006381333931');           // true
 
 ### 📄 Documents
 ```ts
-import { generateGRNNumber, generateDRNumber, generateReferenceNumber } from 'ph-warehouse-toolkit/documents';
+import { generateGRNNumber, generateDRNumber, generateReferenceNumber } from '@ph-itdev/ph-warehouse-toolkit/documents';
 
 generateGRNNumber({ warehouseCode: 'WH01', date: new Date('2026-06-15'), sequence: 1 });
 // 'GRN-WH01-20260615-0001'
@@ -94,7 +94,7 @@ generateDRNumber({ warehouseCode: 'WH01', date: new Date('2026-06-15'), sequence
 
 ### 🎌 Holidays
 ```ts
-import { getPhilippineHolidays, isHoliday, isWarehouseOpen } from 'ph-warehouse-toolkit/holidays';
+import { getPhilippineHolidays, isHoliday, isWarehouseOpen } from '@ph-itdev/ph-warehouse-toolkit/holidays';
 
 getPhilippineHolidays(2026);              // Full list of PH holidays
 isHoliday(new Date('2026-01-01'));         // true (New Year's Day)
