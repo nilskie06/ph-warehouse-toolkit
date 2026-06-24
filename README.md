@@ -115,3 +115,10 @@ Warehouse management in the Philippines has unique requirements:
 ## License
 
 MIT © Nilo Besingga
+
+
+## Changelog
+
+### v0.1.3 (2026-06-24)
+- Added input validation
+- Daily auto-update

@@ -1,7 +1,7 @@
 {
   "name": "@ph-itdev/ph-warehouse-toolkit",
-  "version": "0.1.2",
-  "description": "Philippine warehousing utilities — peso currency, BIR compliance, inventory management, address lookup, validation, barcode support, and more",
+  "version": "0.1.3",
+  "description": "Philippine warehousing utilities \u2014 peso currency, BIR compliance, inventory management, address lookup, validation, barcode support, and more",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -73,7 +73,8 @@
     "logistics",
     "stock",
     "barcode",
-    "typescript"
+    "typescript",
+    "automation"
   ],
   "author": "Nilo Besingga",
   "license": "MIT",
