@@ -119,6 +119,10 @@ MIT © Nilo Besingga
 
 ## Changelog
 
+### v0.1.4 (2026-06-24)
+- Added JSDoc documentation
+- Daily auto-update
+
 ### v0.1.3 (2026-06-24)
 - Added input validation
 - Daily auto-update
